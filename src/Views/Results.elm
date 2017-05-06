@@ -6,6 +6,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Models exposing (TestSuite, Test)
 import Msgs exposing (Msg)
+import Markdown
 
 view : TestSuite -> Dict Int Int -> Html Msg
 view suite answers =
@@ -30,7 +31,7 @@ testResult answers testId test =
 
 correct : Test -> Html Msg
 correct test = span []
-                   [ text test.question
+                   [ Markdown.toHtml [] test.question
                    , span [ class "correct result" ]
                           [ text " is correct" ]
                    ]
@@ -38,7 +39,7 @@ correct test = span []
 
 incorrect : Test -> Html Msg
 incorrect test = span []
-                   [ text test.question
+                   [ Markdown.toHtml [] test.question
                    , span [ class "incorrect result" ]
                           [ text " is incorrect" ]
                    ]
@@ -46,7 +47,7 @@ incorrect test = span []
 
 notAnswered : Test -> Html Msg
 notAnswered test = span []
-                   [ text test.question
+                   [ Markdown.toHtml [] test.question
                    , span [ class "not answered question" ]
                           [ text " is not answered" ]
                    ]

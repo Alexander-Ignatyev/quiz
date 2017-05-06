@@ -7,13 +7,14 @@ import Html.Events exposing (onClick)
 import Models exposing (Test)
 import Msgs exposing (Msg)
 import Routing exposing (testPath)
+import Markdown
 
 
 view : Maybe Int -> String -> Int -> Test -> Html Msg
 view answer testSuiteId testId test =
   let optionFunc = option answer testSuiteId testId
   in div []
-         [ div [ class "question" ] [ text test.question ]
+         [ Markdown.toHtml [ class "question" ] test.question
          , fieldset [] (Array.toList <| Array.indexedMap optionFunc test.options)
          , buttonNext answer testSuiteId testId
          ]
@@ -31,7 +32,7 @@ option answer testSuiteId testId optionId optionText =
                    , onClick msg
                    ]
                    []
-            , span [ class "label-body" ] [ text optionText ]
+            , span [ class "label-body" ] [ Markdown.toHtml [] optionText ]
             ]
 
 buttonNext : Maybe Int -> String -> Int -> Html Msg
