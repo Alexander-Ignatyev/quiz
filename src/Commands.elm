@@ -40,3 +40,5 @@ testsDecoder = Decode.array testDecoder
 testDecoder : Decode.Decoder Test
 testDecoder = decode Test
   |> required "question" Decode.string
+  |> required "options" (Decode.array Decode.string)
+  |> required "answer" Decode.int

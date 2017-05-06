@@ -1,14 +1,18 @@
 module Update exposing (..)
 
 import Msgs exposing (Msg(..))
-import Models exposing (Model)
+import Models exposing (Model, setAnswer)
 import Routing exposing (parseLocation)
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    Msgs.OnFetchTests response -> ({model | testSuites = response}, Cmd.none)
+    Msgs.OnFetchTests response ->
+      ( { model | testSuites = response }, Cmd.none )
     Msgs.OnLocationChange location ->
       let newRoute = parseLocation location
       in ( { model | route = newRoute }, Cmd.none )
+    Msgs.OnOptionSelect testSuiteId testId optionId ->
+      let answers = setAnswer testSuiteId testId optionId model.answers
+      in ( { model | answers = answers }, Cmd.none )

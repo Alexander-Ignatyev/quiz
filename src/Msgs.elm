@@ -8,3 +8,4 @@ import RemoteData exposing (WebData)
 type Msg
   = OnFetchTests (WebData (Dict String TestSuite))
   | OnLocationChange Location
+  | OnOptionSelect String Int Int
