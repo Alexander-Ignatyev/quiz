@@ -1,7 +1,7 @@
 module Views.TestSuiteList exposing (view)
 
 import Dict exposing (Dict)
-import Html exposing (Html, div, text, img, h3, a, table, thead, tbody, tr, th, td)
+import Html exposing (Html, div, text, img, h3, a, table, thead, tbody, tr, th, td, figure, figcaption)
 import Html.Attributes exposing (class, src, width, href)
 import Msgs exposing (Msg)
 import Models exposing (TestSuite)
@@ -9,34 +9,24 @@ import Routing exposing (testSuitePath)
 
 
 view : Dict String TestSuite -> Html Msg
-view = testSuiteTable
-
-
-testSuiteTable : Dict String TestSuite -> Html Msg
-testSuiteTable suites =
-  table [ class "u-full-width" ]
-        [ thead [] [tableRow suites headerCell]
-        , tbody []
-                [ tableRow suites logoCell
-                , tableRow suites buttonCell
-                ]
-        ]
-
-
-tableRow : Dict String TestSuite -> (String -> TestSuite -> Html Msg) -> Html Msg
-tableRow suites cellFunc = Dict.map cellFunc suites
+view suites = Dict.map testSuite suites
   |> Dict.values
-  |> tr []
+  |> div [ class "row" ]
 
 
-headerCell : String -> TestSuite -> Html Msg
-headerCell _ suite = th [] [ text suite.name ]
+testSuite : String -> TestSuite -> Html Msg
+testSuite id suite =
+  figure [ class "four columns u-max-full-width test-suite" ]
+         [ figcaption [] [ text suite.name ]
+         , logo suite
+         , div [ class "clear" ] []
+         , button id ]
 
 
-logoCell : String -> TestSuite -> Html Msg
-logoCell _ suite = td [] [ img [src suite.logo, width 120] [] ]
+logo : TestSuite -> Html Msg
+logo suite = img [ src suite.logo ] []
 
 
-buttonCell : String -> TestSuite -> Html Msg
-buttonCell id _ = td [] [ a [ href (testSuitePath id), class "button" ]
-                            [ text "Start" ] ]
+button : String -> Html Msg
+button id = td [] [ a [ href (testSuitePath id), class "button" ]
+                         [ text "Start" ] ]

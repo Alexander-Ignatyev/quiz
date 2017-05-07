@@ -1,0 +1,18 @@
+.container { margin-top: 30px; }
+
+nav { margin-top: 10px; padding: 10px 0; background-color: #0065a8; }
+nav ul li { display: inline; margin-left: 5px; font-size: 120%; }
+nav a { text-decoration: none; color: white; }
+nav a:hover { text-decoration: underline; color: white; }
+
+.description { margin-bottom: 2em; font-size: 120%; }
+.question { margin-bottom: 1em; font-size: 110%; }
+
+.correct.result { color: green; font-style: oblique; }
+.incorrect.result { color: red; font-style: oblique; }
+.not.answered.question { color: grey; font-style: oblique; }
+
+.test-suite img { height: 100px; margin: 10px 0; }
+.test-suite figcaption { font-size: 120%; }
+.test-suite .button { margin-top: 10px; }
+.clear { clear: both; }
