@@ -15,4 +15,5 @@ nav a:hover { text-decoration: underline; color: white; }
 .test-suite img { height: 100px; margin: 10px 0; }
 .test-suite figcaption { font-size: 120%; }
 .test-suite .button { margin-top: 10px; }
-.clear { clear: both; }
+.grouping:after { clear: both; }
+.float-right { float: right; }
