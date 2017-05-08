@@ -12,7 +12,8 @@ nav a:hover { text-decoration: underline; color: white; }
 .incorrect.result { color: red; font-style: oblique; }
 .not.answered.question { color: grey; font-style: oblique; }
 
-.test-suite img { height: 100px; margin: 10px 0; }
+.test-suite img { height: 100px; margin: 10px 0; transition: 0.25s all linear; }
+.test-suite img:hover { transform: scale(1.25) rotate(5deg); }
 .test-suite figcaption { font-size: 120%; }
 .test-suite .button { margin-top: 10px; }
 .grouping:after { clear: both; }

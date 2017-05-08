@@ -18,12 +18,13 @@ testSuite : String -> TestSuite -> Html Msg
 testSuite id suite =
   figure [ class "four columns u-max-full-width test-suite" ]
          [ figcaption [] [ text suite.name ]
-         , logo suite
+         , logo id suite
          , button id ]
 
 
-logo : TestSuite -> Html Msg
-logo suite = img [ src suite.logo, class "grouping" ] []
+logo : String -> TestSuite -> Html Msg
+logo id suite = a [ href (testSuitePath id) ]
+                  [ img [ src suite.logo, class "grouping" ] [] ]
 
 
 button : String -> Html Msg
