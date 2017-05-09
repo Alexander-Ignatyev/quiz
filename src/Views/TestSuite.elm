@@ -1,7 +1,7 @@
 module Views.TestSuite exposing (view)
 
-import Html exposing (..)
-import Html.Attributes exposing (class, value, href, width, src)
+import Html exposing (Html, text, div, h1, a, img)
+import Html.Attributes exposing (class, href, width, src)
 import Msgs exposing (Msg)
 import Models exposing (TestSuite)
 import Routing exposing (testPath)

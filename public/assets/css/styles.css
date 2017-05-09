@@ -18,3 +18,5 @@ nav a:hover { text-decoration: underline; color: white; }
 .test-suite .button { margin-top: 10px; }
 .grouping:after { clear: both; }
 .float-right { float: right; }
+.error { color: red; }
+.error p { font-style: oblique; font-size: 120%; }

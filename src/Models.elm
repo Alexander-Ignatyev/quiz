@@ -7,6 +7,7 @@ import RemoteData exposing (WebData)
 
 type alias AnswerDict = Dict String (Dict Int Int)
 
+
 type alias Model =
   { testSuites: WebData (Dict String TestSuite)
   , route: Route

@@ -2,11 +2,12 @@ module Views.Results exposing (view)
 
 import Array
 import Dict exposing (Dict)
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, div, h1, ol, li, span, text, a)
+import Html.Attributes exposing (class, href)
 import Models exposing (TestSuite, Test)
 import Msgs exposing (Msg)
 import Markdown
+
 
 view : TestSuite -> Dict Int Int -> Html Msg
 view suite answers =
@@ -14,6 +15,7 @@ view suite answers =
       [ h1 [] [ text "Results" ]
       , ol []
            (Array.indexedMap (testResult answers) suite.tests |> Array.toList)
+      , a [ class "button primary-button", href "#"] [ text "Start again" ]
       ]
 
 

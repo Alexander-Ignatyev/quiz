@@ -1,7 +1,7 @@
 module Views.TestSuiteList exposing (view)
 
 import Dict exposing (Dict)
-import Html exposing (Html, div, text, img, h3, a, table, thead, tbody, tr, th, td, figure, figcaption)
+import Html exposing (Html, div, text, img, a, figure, figcaption)
 import Html.Attributes exposing (class, src, width, href)
 import Msgs exposing (Msg)
 import Models exposing (TestSuite)
@@ -28,5 +28,5 @@ logo id suite = a [ href (testSuitePath id) ]
 
 
 button : String -> Html Msg
-button id = td [] [ a [ href (testSuitePath id), class "button" ]
-                      [ text "Open" ] ]
+button id = div [] [ a [ href (testSuitePath id), class "button" ]
+                       [ text "Open" ] ]

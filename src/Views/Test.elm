@@ -1,8 +1,8 @@
 module Views.Test exposing (view)
 
 import Array
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, div, input, a, span, text, label, fieldset)
+import Html.Attributes exposing (class, type_, checked, name, href, id)
 import Html.Events exposing (onClick)
 import Models exposing (Test)
 import Msgs exposing (Msg)
