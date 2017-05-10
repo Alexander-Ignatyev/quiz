@@ -3,6 +3,7 @@ module Update exposing (..)
 import Msgs exposing (Msg(..))
 import Models exposing (Model, setAnswer)
 import Routing exposing (parseLocation)
+import Navigation
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
@@ -16,3 +17,6 @@ update msg model =
     Msgs.OnOptionSelect testSuiteId testId optionId ->
       let answers = setAnswer testSuiteId testId optionId model.answers
       in ( { model | answers = answers }, Cmd.none )
+    Msgs.AuthToken (Ok token) ->
+      { model | authToken = Just token } ! [ Navigation.modifyUrl "#" ]
+    Msgs.AuthToken (Err _) -> model ! [ ]

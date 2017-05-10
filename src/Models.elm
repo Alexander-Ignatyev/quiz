@@ -3,6 +3,7 @@ module Models exposing (..)
 import Array exposing (Array)
 import Dict exposing (Dict)
 import RemoteData exposing (WebData)
+import Auth
 
 
 type alias AnswerDict = Dict String (Dict Int Int)
@@ -11,7 +12,9 @@ type alias AnswerDict = Dict String (Dict Int Int)
 type alias Model =
   { testSuites: WebData (Dict String TestSuite)
   , route: Route
+  , href: String
   , answers : AnswerDict
+  , authToken : Maybe Auth.Token
   }
 
 
@@ -37,11 +40,13 @@ type Route =
   | NotFoundRoute
 
 
-initialModel : Route -> Model
-initialModel route =
+initialModel : Route -> String -> Model
+initialModel route href =
   { testSuites = RemoteData.Loading
   , route = route
+  , href = href
   , answers = Dict.empty
+  , authToken = Nothing
   }
 
 

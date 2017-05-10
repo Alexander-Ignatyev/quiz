@@ -1,4 +1,3 @@
 'use strict';
 
-let mountNode = document.getElementById('main');
-let app = Elm.Main.embed(mountNode);
+let app = Elm.Main.fullscreen();

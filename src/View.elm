@@ -4,7 +4,8 @@ import RemoteData exposing (WebData)
 import String
 import Array exposing (Array)
 import Dict exposing (Dict)
-import Html exposing (Html, text)
+import Html exposing (Html, text, div)
+import Html.Attributes exposing (class)
 import Msgs exposing (Msg)
 import Models exposing (Model, TestSuite, getAnswer, getAnswers)
 import Views.Test
@@ -12,10 +13,19 @@ import Views.TestSuite
 import Views.TestSuiteList
 import Views.Results
 import Views.Error
+import Views.Nav
 
 
 view : Model -> Html Msg
-view model = case model.route of
+view model =
+  div []
+      [ Views.Nav.bar model
+      , div [ class "container" ] [ page model ]
+      ]
+
+
+page : Model -> Html Msg
+page model = case model.route of
   Models.TestSuitesRoute -> viewTestSuiteList model.testSuites
   Models.TestSuiteRoute testSuiteId -> viewTestSuite testSuiteId model.testSuites
   Models.TestRoute testSuiteId testId -> viewTest testSuiteId testId model

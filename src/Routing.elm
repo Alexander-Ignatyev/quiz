@@ -1,5 +1,6 @@
 module Routing exposing (parseLocation, testSuitePath, testPath)
 
+import String
 import Navigation exposing (Location)
 import Models exposing (Route(..))
 import UrlParser exposing (..)
@@ -20,8 +21,8 @@ parseLocation location = case (parseHash matchers location) of
 
 
 testSuitePath : String -> String
-testSuitePath testSuiteId = "#suite/" ++ testSuiteId
+testSuitePath testSuiteId = String.concat ["#suite/", testSuiteId]
 
 
 testPath : String -> Int -> String
-testPath testSuiteId testId = "#test/" ++ testSuiteId ++ "/" ++ (toString testId)
+testPath testSuiteId testId = String.concat ["#test/", testSuiteId, "/", (toString testId)]

@@ -19,7 +19,8 @@ testSuite id suite =
   figure [ class "four columns u-max-full-width test-suite" ]
          [ figcaption [] [ text suite.name ]
          , logo id suite
-         , button id ]
+         , button id
+         ]
 
 
 logo : String -> TestSuite -> Html Msg
