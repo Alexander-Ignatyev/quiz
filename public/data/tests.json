@@ -71,5 +71,62 @@
         "answer": 2
       }
     ]
+  },
+  "rome": {
+    "name": "Roman numerals",
+    "description": "The numeric system represented by Roman numerals originated in ancient Rome.",
+    "logo": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMzI5LjAwMDAwMHB0IiBoZWlnaHQ9IjE1Ny4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDMyOS4wMDAwMDAgMTU3LjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgo8bWV0YWRhdGE+CkNyZWF0ZWQgYnkgcG90cmFjZSAxLjE0LCB3cml0dGVuIGJ5IFBldGVyIFNlbGluZ2VyIDIwMDEtMjAxNwo8L21ldGFkYXRhPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwxNTcuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIgpmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiPgo8cGF0aCBkPSJNMTUwIDEzODQgYzAgLTMgNzkgLTEzMyAxNzUgLTI4OSA5NiAtMTU2IDE3NSAtMjg2IDE3NSAtMjkwIDAgLTMKLTgxIC0xMzMgLTE4MCAtMjg5IC05OSAtMTU2IC0xODAgLTI4NyAtMTgwIC0yOTAgMCAtMyAzNyAtNiA4MyAtNiBsODIgMCAxMzkKMjI2IGM3NyAxMjQgMTQyIDIyNyAxNDYgMjI5IDMgMiA2OSAtOTkgMTQ1IC0yMjYgbDE0MCAtMjI5IDg5IDAgYzY2IDAgODcgMwo4MyAxMyAtMiA2IC04NCAxNDAgLTE4MSAyOTYgbC0xNzYgMjgzIDE3MiAyNzIgYzk0IDE0OSAxNzYgMjc2IDE4MiAyODMgOCA5CjY0IC0xNDIgMjEwIC01NjggbDIwMCAtNTgwIDg1IDMgODQgMyAxOTkgNTc1IGMxMDggMzE2IDE5OCA1NzggMTk4IDU4MyAwIDQKLTM2IDcgLTc5IDcgbC03OSAwIC0xNTkgLTQ3NSBjLTg3IC0yNjEgLTE2MCAtNDc1IC0xNjMgLTQ3NSAtMyAxIC03NSAyMTMKLTE2MSA0NzMgbC0xNTUgNDcyIC0xNzAgMyAtMTcwIDIgLTEzOCAtMjI1IGMtNzcgLTEyNCAtMTQyIC0yMjUgLTE0NSAtMjI1IC0zCjEgLTY3IDEwMiAtMTQxIDIyNSBsLTEzNSAyMjUgLTg3IDAgYy00OSAwIC04OCAtMyAtODggLTZ6Ii8+CjxwYXRoIGQ9Ik0yMDkwIDEzMzAgbDAgLTU5IDczIC0zIDcyIC0zIDAgLTQ2MCAwIC00NjAgLTcyIC0zIC03MyAtMyAwIC01OSAwCi02MCAyMjUgMCAyMjUgMCAwIDYwIDAgNjAgLTc1IDAgLTc1IDAgMiA0NjMgMyA0NjIgNzMgMyA3MiAzIDAgNTkgMCA2MCAtMjI1CjAgLTIyNSAwIDAgLTYweiIvPgo8cGF0aCBkPSJNMjY4MCAxMzMwIGwwIC02MCA3NSAwIDc1IDAgMCAtNDY1IDAgLTQ2NSAtNzUgMCAtNzUgMCAwIC02MCAwIC02MAoyMjUgMCAyMjUgMCAwIDYwIDAgNjAgLTcwIDAgLTcwIDAgMCA0NjUgMCA0NjUgNzAgMCA3MCAwIDAgNjAgMCA2MCAtMjI1IDAKLTIyNSAwIDAgLTYweiIvPgo8L2c+Cjwvc3ZnPgo=",
+    "tests": [
+      {
+        "question": "What is the Roman numeral of `1000`?",
+        "options": [
+          "X",
+          "C",
+          "D",
+          "M"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What is the Roman numeral of `489`?",
+        "options": [
+          "XID",
+          "IXD",
+          "CDLXXXIX",
+          "CDIXC"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the Roman numeral of `999`?",
+        "options": [
+          "IM",
+          "CMXCIX",
+          "DCCCCIC",
+          "XMIX"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Convert Roman literal `MCMXXXVIII` to arabic number",
+        "options": [
+          "979",
+          "1938",
+          "1838",
+          "1939"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Convert Roman literal `DLV` to arabic number",
+        "options": [
+          "565",
+          "777",
+          "139",
+          "555"
+        ],
+        "answer": 3
+      }
+    ]
   }
 }
