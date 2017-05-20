@@ -20,3 +20,5 @@ nav a:hover { text-decoration: underline; color: white; }
 .float-right { float: right; }
 .error { color: red; }
 .error p { font-style: oblique; font-size: 120%; }
+
+.result-list span > div { display: inline-block; }

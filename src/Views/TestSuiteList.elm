@@ -16,7 +16,7 @@ view suites = Dict.map testSuite suites
 
 testSuite : String -> TestSuite -> Html Msg
 testSuite id suite =
-  figure [ class "four columns u-max-full-width test-suite" ]
+  figure [ class "three columns u-max-full-width test-suite" ]
          [ figcaption [] [ text suite.name ]
          , logo id suite
          , button id

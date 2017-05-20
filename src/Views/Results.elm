@@ -13,7 +13,7 @@ view : TestSuite -> Dict Int Int -> Html Msg
 view suite answers =
   div [ class "row" ]
       [ h1 [] [ text "Results" ]
-      , ol []
+      , ol [ class "result-list" ]
            (Array.indexedMap (testResult answers) suite.tests |> Array.toList)
       , a [ class "button primary-button", href "#"] [ text "Start again" ]
       ]
