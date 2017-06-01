@@ -4,7 +4,7 @@ A simple serverless web application written on [Elm](http://elm-lang.org/).
 
 This is trivial implementation of quiz tool. All tests are defined in `public/data/tests.json` file.
 
-The running appliucation is available at: http://quiz.aligus.net.s3-website-eu-west-1.amazonaws.com/
+The running appliucation is available at: https://quiz.aligus.net/
 
 
 ## Project structure
